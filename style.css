@@ -1,0 +1,223 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+}
+body{
+    background-color: hsl(222, 26%, 31%);
+}
+.white-mode{
+    background-color: hsl(0, 0%, 90%);
+} 
+.purple-mode{
+    background-color: hsl(268, 75%, 9%);
+}
+.calculator{
+    width: 400px;
+    margin: 10px auto 0px;
+}
+.header{
+    color: hsl(30, 25%, 89%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.white-mode .header{
+    color: hsl(60, 10%, 19%);
+}
+.purple-mode .header{
+    color: hsl(52, 100%, 62%);
+}
+.header h6{
+    margin-right: 10px;
+    margin-top: 12px;
+}
+.header>div{
+    display: flex;
+    align-items: center;
+}
+.toggle-parent{
+    position: relative;
+}
+.toggle-nums{
+    display: flex;
+    width: 85%;
+    margin: 0px auto 5px;
+}
+.toggle-nums p{
+    margin-left: 13px;
+    font-size: .9em;
+    cursor: pointer;
+}
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 65px;
+    height: 25px;
+    margin: 0px 10px;
+}
+.slider{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color:  hsl(223, 31%, 20%);
+    transition: .4s;
+    border-radius: 34px;
+}
+.white-mode .slider{
+    background-color: hsl(0, 5%, 81%);
+}
+.purple-mode .slider{
+    background-color: hsl(268, 71%, 12%)
+}
+.slider::before{
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 15px;
+    left: 5px;
+    bottom: 4.6px;
+    background-color: hsl(6, 63%, 50%);
+    transition: 0.4s;
+    border-radius: 50px;
+}
+.white-mode .slider::before{
+    transform: translateX(18px);
+    background-color: hsl(25, 98%, 40%);
+}
+.purple-mode .slider::before{
+    transform: translateX(38px);
+    background-color: hsl(176, 100%, 44%);
+}
+.screen{
+    background-color: hsl(224, 36%, 15%);
+    min-height: 90px;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 20px;
+    font-size: 2.8em;
+    word-break: break-all;
+}
+.white-mode .screen{
+    background-color: hsl(0, 0%, 93%);
+    color: hsl(60, 10%, 19%);
+}
+.purple-mode .screen{
+    background-color: hsl(268, 71%, 12%);
+    color: hsl(52, 100%, 62%);
+}
+.buttons{
+    background-color: hsl(223, 31%, 20%);
+    display: grid;
+    grid-template-columns: repeat(4 ,1fr);
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 20px;
+}
+.white-mode .buttons{
+    background-color: hsl(0, 5%, 81%);
+}
+.purple-mode .buttons{
+    background-color: hsl(268, 71%, 12%)
+}
+.buttons button{
+    margin: 10px;
+    padding: 12px 0px;
+    border-radius: 9px;
+    outline: none;
+    border: none;
+    font-size: 1.7em;
+    background-color: hsl(30, 25%, 89%);
+    color: hsl(221, 14%, 31%);
+    box-shadow: 0px 3px 1px hsl(28, 16%, 65%);
+    cursor: pointer;
+}
+.white-mode .buttons button{
+    background-color: hsl(45, 7%, 89%);
+    box-shadow: 0px 3px 1px hsl(35, 11%, 61%);
+    color: hsl(60, 10%, 19%);
+}
+.purple-mode .buttons button{
+    background-color: hsl(268, 47%, 21%);
+    box-shadow: 0px 3px 1px hsl(290, 70%, 36%);
+    color: hsl(52, 100%, 62%);
+}
+.buttons button:hover{
+    background-color: white;
+}
+.purple-mode .buttons button:hover{
+    background-color: hsl(268, 47%, 41%);
+}
+#reset , #equal{
+    grid-column: span 2;
+}
+#equal{
+    background-color: hsl(6, 63%, 50%);
+    color: hsl(30, 25%, 89%);
+    box-shadow: 0px 3px 1px hsl(6, 70%, 34%);
+}
+.white-mode #equal{
+    background-color: hsl(25, 98%, 40%);
+    box-shadow: 0px 3px 1px hsl(25, 99%, 27%);
+}
+.purple-mode #equal{
+    background-color: hsl(176, 100%, 44%);
+    box-shadow: 0px 3px 1px hsl(177, 92%, 70%);
+    color: hsl(198, 20%, 13%);
+}
+#equal:hover{
+    background-color: hsl(6, 63%, 65%);
+    color: white;
+}
+.white-mode #equal:hover{
+    background-color: hsl(25, 98%, 55%);
+}
+.purple-mode #equal:hover{
+    background-color: hsl(176, 100%, 74%);
+    color: hsl(198, 20%, 13%);
+}
+#reset,#delete{
+    background-color: hsl(225, 21%, 49%);
+    color: hsl(30, 25%, 89%);
+    box-shadow: 0px 3px 1px hsl(224, 28%, 35%);
+    font-size: 1.3em;
+}
+.white-mode #reset, .white-mode #delete{
+    background-color: hsl(185, 42%, 37%);
+    box-shadow: 0px 3px 1px hsl(185, 58%, 25%);
+}
+.purple-mode #reset, .purple-mode #delete{
+    background-color: hsl(281, 89%, 26%);
+    box-shadow: 0px 3px 1px hsl(285, 91%, 52%);
+}
+#reset:hover,#delete:hover{
+    background-color: hsl(225, 21%, 70%);
+    color: white;
+}
+.white-mode #reset:hover, .white-mode #delete:hover{
+    background-color: hsl(185, 42%, 57%);
+}
+.purple-mode #reset:hover, .purple-mode #delete:hover{
+    background-color: hsl(281, 89%, 46%);
+}
+@media only screen and (max-width:440px){
+    .calculator{
+        width: 90%;
+    }
+    .screen{
+        min-height: 80px;
+    }
+    .buttons button{
+        margin: 7px;
+    }
+    #reset,#delete{
+        font-size: 1.2em;
+    }
+}
